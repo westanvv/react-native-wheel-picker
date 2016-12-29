@@ -23,7 +23,7 @@ For apps using RN 0.31 or less, please run
 ```
 npm install --save --save-exact react-native-wheel-picker@1.0.1
 ```
-Add in settings.gradle 
+Add in settings.gradle
 ```
 include ':react-native-wheel-picker'
 project(':react-native-wheel-picker').projectDir = new File(settingsDir, '../node_modules/react-native-wheel-picker/android')
@@ -36,7 +36,7 @@ Modify MainActivity
 ```
     import com.zyu.ReactNativeWheelPickerPackage;
     ......
-    
+
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
             new MainReactPackage(), new ReactNativeWheelPickerPackage()
@@ -62,7 +62,7 @@ var PickerItem = Picker.Item;
 
 
 var AwesomeProject = React.createClass({
-  
+
   getInitialState: function() {
     return {
       selectedItem : 2,
@@ -94,6 +94,7 @@ var AwesomeProject = React.createClass({
         </Text>
         <Picker style={{width: 150, height: 180}}
           selectedValue={this.state.selectedItem}
+          selectedLineColor={"white"}
           itemStyle={{color:"white", fontSize:26}}
           onValueChange={(index) => this.onPikcerSelect(index)}>
             {this.state.itemList.map((value, i) => (
